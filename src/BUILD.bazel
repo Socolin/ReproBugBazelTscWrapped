@@ -1,0 +1,16 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@npm_bazel_typescript//:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+# Create a tsc_wrapped compiler rule to use in the ts_library 
+# compiler attribute when using self-managed dependencies 
+ts_library(
+    name = "src",
+    srcs = glob(include = [
+        "**/*.ts",
+    ], exclude = [
+        "index.ts"
+    ]),
+    tsconfig = "//:tsconfig.json"
+)

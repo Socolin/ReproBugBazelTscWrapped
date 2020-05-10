@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@bazel/bazelisk": "^1.4.0",
+    "@bazel/ibazel": "^0.13.0",
+    "@bazel/typescript": "^1.6.1",
+    "typescript": "^3.8.3"
+  }
+}
